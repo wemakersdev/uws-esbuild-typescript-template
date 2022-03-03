@@ -1,0 +1,20 @@
+{
+  "name": "notebrowser-api-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "vite": "^2.8.6",
+    "vite-plugin-node": "^0.0.17",
+    "vite-tsconfig-paths": "^3.4.1"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

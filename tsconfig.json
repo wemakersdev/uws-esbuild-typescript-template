@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": false,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext"],
+    "types": ["vite/client"],
+    "typeRoots": ["node_modules/@types"],
+    "allowJs": true,
+    "paths": {
+		"@common/*": ["./src/common/*"],
+		"@helpers/*": ["./src/helpers/*"],
+		"@stores/*": ["./src/stores/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+  ],
+}
