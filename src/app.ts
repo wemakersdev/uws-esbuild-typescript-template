@@ -1,15 +1,12 @@
-import express from 'express'
-import { IS_PROD, PRODUCTION_PORT } from './common/constants';
+import { PRODUCTION_PORT } from './common/constants';
+import {App} from 'uWebSockets.js';
 
-const app = express();
+const app = App();
 
-
-app.get("/", (req,res) => {
-  res.send("Hello World!");
+app.get("/", (res, req) => {
+  res.write("Hello World!");
+  res.end();
 })
 
-if (IS_PROD) {
-  app.listen(PRODUCTION_PORT, () => console.log(`Server started on port ${PRODUCTION_PORT}`));
-}
-
+app.listen(PRODUCTION_PORT, () => console.log(`Server started on port ${PRODUCTION_PORT}`));
 export const server = app;
